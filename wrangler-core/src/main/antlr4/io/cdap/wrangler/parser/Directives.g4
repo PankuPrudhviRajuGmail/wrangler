@@ -308,6 +308,12 @@ fragment Int
  | '0'
  ;
 
+fragment BYTE_UNIT: 'B' | 'KB' | 'MB' | 'GB' | 'TB';
+fragment TIME_UNIT: 'ns' | 'ms' | 's' | 'm' | 'h' | 'd';
+
+BYTE_SIZE: NUMBER BYTE_UNIT;
+TIME_DURATION: NUMBER TIME_UNIT;
+
 fragment Digit
  : [0-9]
  ;
